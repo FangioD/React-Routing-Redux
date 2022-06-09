@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import user from "../../images/user-icon.png";
 import { useDispatch } from 'react-redux';
 import "./Header.scss";
-import { fetchAsyncMovies, fetchAsyncShows } from '../../features/movies/movieSlice';
+import { fetchAsyncMovies } from '../../features/movies/movieSlice';
 
 function Header() {
 
@@ -13,7 +13,6 @@ function Header() {
     e.preventDefault();
     console.log(term);
     dispatch(fetchAsyncMovies(term));
-    dispatch(fetchAsyncShows(term));
     setTerm("");
   }
 
