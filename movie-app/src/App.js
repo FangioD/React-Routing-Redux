@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+//add imports
 import Home from "./components/home/Home";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
@@ -8,19 +8,17 @@ import MovieDetail from "./components/movieDetail/MovieDetail";
 import './App.scss';
 
 function App() {
+
+  // add routes for /, /movie/id and *
   return (
     <div className="App">
-      <Router>
+     
         <Header />
         <div className="container">
-        <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/movie/:imdbID" element={<MovieDetail/>} />
-          <Route path="*" element={<PageNotFound/>} />
-        </Routes>
+       
         </div>
         <Footer />
-      </Router>
+    
     </div>
   );
 }

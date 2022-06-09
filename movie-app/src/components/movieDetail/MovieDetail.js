@@ -1,11 +1,11 @@
 import React, {useEffect} from 'react';
-import { useParams } from "react-router-dom";
+//add import
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAsyncMovieOrShowDetail, getSelectedMovieOrShow, removeSelectedMovieOrShow} from "../../features/movies/movieSlice";
 import "./MovieDetail.scss";
 
 function MovieDetail() {
-  const { imdbID } = useParams();
+  // imdbID is missing
   const dispatch = useDispatch();
   const data = useSelector(getSelectedMovieOrShow);
   console.log(data);
